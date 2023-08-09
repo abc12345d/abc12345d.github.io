@@ -1,0 +1,16 @@
+body{
+    background-color: #F6F4EB;
+    font-family: monospace,sans-serif;
+}
+
+.page-container{
+    position: relative;
+    min-height: 95vh;
+}
+
+.content-container{
+    margin: 120px 12.5% 20px 12.5%;
+    padding-bottom: 5rem;
+}
+
+

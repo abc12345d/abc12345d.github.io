@@ -1,0 +1,28 @@
+.projectCard-container{
+    background-color: white;
+    border-radius: 15px;
+    max-width: 100%;
+    min-height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imageWrapper-projectCard{
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+.imageWrapper-projectCard img{
+    max-width: 100%;
+}
+
+.textWrapper-projectCard{
+    line-height: 1.2;
+    margin: 10px 10px;
+}
+
+.textWrapper-projectCard a{    
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;   
+    font-weight: 500;
+}

@@ -4,7 +4,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "portfolio_website",
+  base: "abc12345d.github.io",
   plugins: [svgr(), react()],assetsInclude: ['**/*.md']
   
 });

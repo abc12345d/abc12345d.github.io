@@ -17,13 +17,13 @@ const App = () => (
 
     <div className="content-container">
       <Routes>
-        <Route exact path="/" element={<></>} />
-        <Route exact path="projects" element={<Projects />} />
-        <Route exact path="about" element={<About />} />
-        <Route exact path="contact" element={<Contact />} />
+        <Route exact path="/myPortfolio" element={<></>} />
+        <Route exact path="/myPortfolio/projects" element={<Projects />} />
+        <Route exact path="/myPortfolio/about" element={<About />} />
+        <Route exact path="/myPortfolio/contact" element={<Contact />} />
 
-        <Route path="notes" element={<Notes />} />
-        <Route path="notes/:noteId" element={<NoteDetails />} />
+        <Route path="/myPortfolio/notes" element={<Notes />} />
+        <Route path="/myPortfolio/notes/:noteId" element={<NoteDetails />} />
       </Routes>
     </div>
 

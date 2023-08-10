@@ -5,22 +5,22 @@ const Navbar = () => (
   <nav>
     <div className="nav-container">
       <div className="home">
-        <NavLink to="/myPortfolio/">Zhiqi Lee</NavLink>
+        <NavLink to="/">Zhiqi Lee</NavLink>
       </div>
       <div className="nav-elements">
         <ul>
           <li>
-            <NavLink to="/myPortfolio/about">About</NavLink>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink to="/myPortfolio/projects">Projects</NavLink>
+            <NavLink to="/projects">Projects</NavLink>
           </li>
           <li>
-            <NavLink to="/myPortfolio/notes">Notes</NavLink>
+            <NavLink to="/notes">Notes</NavLink>
           </li>
 
           <li>
-            <NavLink to="/myPortfolio/contact">Contact</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
       </div>

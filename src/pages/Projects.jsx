@@ -13,6 +13,11 @@ const Projects = () => (
       <ProjectCard shortDescription="shortDescription twerfe weewr" />
       <ProjectCard shortDescription="shortDescription twerfe weewr" />
       <ProjectCard shortDescription="shortDescription twerfe weewr" />
+      <ProjectCard
+        shortDescription="shortDescription shortDescription shortDescription adssdsadad deawqedwq
+    wedwfre gterg twerfe weewr"
+      />
+      <ProjectCard shortDescription="shortDescription twerfe weewr" />
     </div>
   </>
 );

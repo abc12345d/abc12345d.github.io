@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
+import SVGIcon from "./SVGIcon.jsx";
 import "./Navbar.css";
 
 const Navbar = () => (
   <nav>
     <div className="nav-container">
       <div className="home">
-        <NavLink to="/">Zhiqi Lee</NavLink>
+        <NavLink to="/">
+          <SVGIcon name={"myName"} width="100%" height="50px" />
+        </NavLink>
       </div>
       <div className="nav-elements">
         <ul>

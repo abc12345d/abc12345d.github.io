@@ -4,13 +4,15 @@
     grid-auto-rows: 1fr;
     justify-content: space-between;
     padding-bottom: 2.5em;
-    
-    @media (min-width: 800px){
-        grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 800px) {
+    .cards {
+        grid-template-columns:repeat(1, 1fr)
     }
+}
 
-    @media (min-width: 1200px){
-        grid-template-columns: repeat(2, 1fr);
+@media (min-width: 1200px) {
+    .cards {
+        grid-template-columns:repeat(2, 1fr)
     }
-
 }

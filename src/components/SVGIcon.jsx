@@ -2,6 +2,12 @@
 
 const Path = ({ name, fill }) => {
   switch (name) {
+    case "myName":
+      return (
+        <text x="0" y="75" fontFamily="monospace" fill={fill}>
+          Zhiqi Lee
+        </text>
+      );
     case "github":
       return (
         <path
@@ -32,6 +38,8 @@ const Path = ({ name, fill }) => {
 
 const getViewBox = ({ name }) => {
   switch (name) {
+    case "myName":
+      return "0 0 500 90";
     case "github":
       return "0 0 100 100";
     case "linkedin":

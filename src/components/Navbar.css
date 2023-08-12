@@ -20,9 +20,16 @@
   color: #4682A9;
 }
 
-.home a{
-    font-size: 60px;
+.home .myName{
+    font: bold 80px san-serif;
+    text-align: left;
 }
+
+.home .myName:hover text{
+  fill: #4682A9;
+}
+
+
 
 .nav-elements ul {
   display: flex;

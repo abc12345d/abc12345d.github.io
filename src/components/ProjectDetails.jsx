@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
-import "./NoteDetails.css";
+import "./ProjectDetails.css";
 
-function NoteDetails() {
-  const { noteId } = useParams();
+function ProjectDetails() {
+  const { projectName } = useParams();
   const [post, setPost] = useState("");
 
   useEffect(() => {
-    import(`../markdowns/notes/${noteId}.md`)
+    import(`../markdowns/projects/${projectName}.md`)
       .then((res) => {
         fetch(res.default)
           .then((res) => res.text())
@@ -16,7 +16,7 @@ function NoteDetails() {
           .catch((err) => console.log(err));
       })
       .catch((err) => console.log(err));
-  }, [noteId]);
+  }, [projectName]);
 
   return (
     <div className="markdownContainer">
@@ -25,4 +25,4 @@ function NoteDetails() {
   );
 }
 
-export default NoteDetails;
+export default ProjectDetails;

@@ -1,30 +1,36 @@
 /* eslint-disable react/prop-types */
 import "./ProjectCard.css";
+import { NavLink } from "react-router-dom";
 
 function ImageWrapper({ filename }) {
   const imgUrl = new URL(`../assets/images/${filename}.png`, import.meta.url)
     .href;
-  return <img src={imgUrl} />;
+  return (
+    <NavLink to={`/projects/${filename}`}>
+      <img src={imgUrl} />
+    </NavLink>
+  );
 }
 
-const TextWrapper = ({ shortDescription }) => (
+const TextWrapper = ({ projectName, description }) => (
   <>
-    <a>Link ipsum</a>
+    <NavLink to={`/projects/${projectName}`}>
+      {projectName.toString().split("_").join(" ")}
+    </NavLink>
     <br />
-    {shortDescription}
+    {description}
   </>
 );
 
-function ProjectCard({ shortDescription }) {
-  const filename = "image_ipsum";
-
+function ProjectCard({ projectName, description }) {
+  console.log(projectName);
   return (
     <div className="projectCard-container">
       <div className="imageWrapper-projectCard">
-        <ImageWrapper filename={filename} />
+        <ImageWrapper filename={projectName} />
       </div>
       <div className="textWrapper-projectCard">
-        <TextWrapper shortDescription={shortDescription} />
+        <TextWrapper projectName={projectName} description={description} />
       </div>
     </div>
   );

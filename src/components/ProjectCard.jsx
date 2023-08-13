@@ -2,9 +2,11 @@
 import "./ProjectCard.css";
 import { NavLink } from "react-router-dom";
 
-function ImageWrapper({ filename }) {
-  const imgUrl = new URL(`../assets/images/${filename}.png`, import.meta.url)
-    .href;
+function ImageWrapper({ filename, fileExtension }) {
+  const imgUrl = new URL(
+    `../assets/images/${filename}.${fileExtension}`,
+    import.meta.url
+  ).href;
   return (
     <NavLink to={`/projects/${filename}`}>
       <img src={imgUrl} />
@@ -22,12 +24,12 @@ const TextWrapper = ({ projectName, description }) => (
   </>
 );
 
-function ProjectCard({ projectName, description }) {
+function ProjectCard({ projectName, description, fileExtension }) {
   console.log(projectName);
   return (
     <div className="projectCard-container">
       <div className="imageWrapper-projectCard">
-        <ImageWrapper filename={projectName} />
+        <ImageWrapper filename={projectName} fileExtension={fileExtension} />
       </div>
       <div className="textWrapper-projectCard">
         <TextWrapper projectName={projectName} description={description} />

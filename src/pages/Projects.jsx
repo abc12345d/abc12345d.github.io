@@ -5,14 +5,16 @@ const filename = "image_ipsum";
 const Projects = () => (
   <div className="cards">
     <ProjectCard
-      projectName={filename}
-      description={"dsefsdfvdsfvdsfsdfsdfewrwefewfwe"}
+      projectName={"Snake_Game"}
+      description={"A Python-powered classic"}
+      fileExtension={"gif"}
     />
     <ProjectCard
       projectName={filename}
       description={
         "dsefsdfvh hihi ijijij huihjijiji jijij  dsfvdsfsdfsdfewrwefewfwe"
       }
+      fileExtension={"png"}
     />
   </div>
 );

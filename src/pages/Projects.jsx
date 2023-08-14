@@ -7,7 +7,7 @@ const Projects = () => (
     <ProjectCard
       projectName={"Stock_News_Alert_System"}
       description={
-        "Sends SMS notifications when the closing price of yesterday and the day before yesterday differs by more than 5%"
+        "Sends news about the stock via SMS when the closing price of yesterday and the day before yesterday differs by more than 5%"
       }
       fileExtension={"gif"}
     />

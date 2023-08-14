@@ -1,6 +1,6 @@
 body{
     background-color: #F6F4EB;
-    font-family: monospace,sans-serif;
+    font-family: sans-serif;
 }
 
 .page-container{
@@ -9,7 +9,7 @@ body{
 }
 
 .content-container{
-    margin: 90px 12.5% 20px 12.5%;
+    margin: 70px 12.5% 20px 12.5%;
     padding-bottom: 5rem;
 }
 

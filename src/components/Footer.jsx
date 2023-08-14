@@ -1,15 +1,15 @@
 import "./Footer.css";
 import SVGIcon from "./SVGIcon.jsx";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <div className="footer">
       <span className="iconList">
-        <button className="svgButton" onClick={() => navigate("/Contact")}>
+        {/* <button className="svgButton" onClick={() => navigate("/Contact")}>
           <SVGIcon name={"email"} />
-        </button>
+        </button> */}
 
         <a href="https://github.com/abc12345d" target="_blank" rel="noreferrer">
           <SVGIcon name={"github"} />

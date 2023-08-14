@@ -5,7 +5,7 @@ const Path = ({ name, fill }) => {
     case "myName":
       return (
         <text x="0" y="75" fontFamily="monospace" fill={fill}>
-          Zhiqi Lee
+          ZhiQi Lee
         </text>
       );
     case "github":

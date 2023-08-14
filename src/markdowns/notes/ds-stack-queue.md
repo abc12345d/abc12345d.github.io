@@ -5,7 +5,9 @@ Interface of Stack:\
 (1) push\
 (2) pop\
 (3) top
-![](./images/20230209224253.png) 
+
+<img width="651" alt="20230209224253" src="https://github.com/abc12345d/algorithm_practice/assets/44512722/d68054f4-921d-4080-8c00-e265a4fc7abf">
+
 Unlike an array, random access is not allowed for the objects contained in the stack.
 
 # Queue
@@ -15,7 +17,9 @@ Interface of Stack:\
 (1) push\
 (2) pop\
 (3) peek: Returns the element at the front of the queue.
-![](./images/20230209224253.png) 
+
+<img width="651" alt="20230209224253" src="https://github.com/abc12345d/algorithm_practice/assets/44512722/d68054f4-921d-4080-8c00-e265a4fc7abf">
+
 Unlike an array, random access is not allowed for the objects contained in the stack.
 
 # Monotonic queue/stack
@@ -40,3 +44,4 @@ The space complexity is O(N) as there may be at most N elements in the monotonic
 # Reference
 [代码随想录 - 栈](https://programmercarl.com/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html)\
 [algomonster - Monotonic Stack/Deque Intro](https://algo.monster/problems/mono_stack_intro)
+`

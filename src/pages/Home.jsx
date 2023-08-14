@@ -1,4 +1,4 @@
-import "./About.css";
+import "./Home.css";
 const P4 = () => (
   <section id="p4">
     <h1>p4</h1>
@@ -49,9 +49,9 @@ const P4 = () => (
     </p>
   </section>
 );
-const About = () => (
+const Home = () => (
   <>
     <P4 />
   </>
 );
-export default About;
+export default Home;

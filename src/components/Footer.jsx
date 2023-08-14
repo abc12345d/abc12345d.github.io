@@ -22,6 +22,9 @@ const Footer = () => {
           <SVGIcon name={"linkedin"} />
         </a>
       </span>
+      <p className="websiteDescription">
+        Built with React.js from scratch by <a href="zqlee.xyz">Zhi Qi Lee</a>
+      </p>
     </div>
   );
 };

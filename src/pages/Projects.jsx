@@ -5,6 +5,13 @@ const filename = "image_ipsum";
 const Projects = () => (
   <div className="cards">
     <ProjectCard
+      projectName={"Mini_Database_System"}
+      description={
+        "A lightweight database system that has query optimisation and supports basic data operations"
+      }
+      fileExtension={"jpeg"}
+    />
+    <ProjectCard
       projectName={"Stock_News_Alert_System"}
       description={
         "Sends news about the stock via SMS when the closing price of yesterday and the day before yesterday differs by more than 5%"
@@ -17,6 +24,13 @@ const Projects = () => (
         "Sends bulk of personalised emails automatically from CSV file using Python."
       }
       fileExtension={"gif"}
+    />
+    <ProjectCard
+      projectName={"News_Search_Engine"}
+      description={
+        "Provide users with accurate and relevant news articles as search results based on their queries."
+      }
+      fileExtension={"png"}
     />
     <ProjectCard
       projectName={"Snake_Game"}

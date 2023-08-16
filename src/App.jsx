@@ -12,24 +12,74 @@ import ProjectDetails from "./components/ProjectDetails";
 
 import "./App.css";
 
+const HomePageWrapper = ({ children }) => (
+  <>
+    <Navbar />
+    <div className="content-container">{children}</div>
+  </>
+);
+const OtherPageWrapper = ({ children }) => (
+  <>
+    <Navbar />
+    <div className="content-container">{children}</div>
+  </>
+);
 const App = () => (
   <div className="page-container">
-    <Navbar />
-    <div className="content-container">
-      <Routes>
-        <Route exact path="/" element={<Home />} />q
-        <Route exact path="/contact" element={<Contact />} />
-        <Route path="/notes" element={<Notes />} />
-        <Route path="/notes/:noteId" element={<NoteDetails />} />
-        <Route exact path="/projects" element={<Projects />} />
-        <Route
-          exact
-          path="/projects/:projectName"
-          element={<ProjectDetails />}
-        />
-      </Routes>
-    </div>
-
+    <Routes>
+      <Route
+        exact
+        path="/"
+        element={
+          <HomePageWrapper className="otherPageWrapper">
+            <Home />
+          </HomePageWrapper>
+        }
+      />
+      <Route
+        exact
+        path="/contact"
+        element={
+          <OtherPageWrapper>
+            <Contact />
+          </OtherPageWrapper>
+        }
+      />
+      <Route
+        path="/notes"
+        element={
+          <OtherPageWrapper>
+            <Notes />
+          </OtherPageWrapper>
+        }
+      />
+      <Route
+        path="/notes/:noteId"
+        element={
+          <OtherPageWrapper>
+            <NoteDetails />
+          </OtherPageWrapper>
+        }
+      />
+      <Route
+        exact
+        path="/projects"
+        element={
+          <OtherPageWrapper>
+            <Projects />
+          </OtherPageWrapper>
+        }
+      />
+      <Route
+        exact
+        path="/projects/:projectName"
+        element={
+          <OtherPageWrapper>
+            <ProjectDetails />
+          </OtherPageWrapper>
+        }
+      />
+    </Routes>
     <Footer />
   </div>
 );

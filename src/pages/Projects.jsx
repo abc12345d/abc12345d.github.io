@@ -5,20 +5,6 @@ const filename = "image_ipsum";
 const Projects = () => (
   <div className="cards">
     <ProjectCard
-      projectName={"Computational_Psychiatry_in_PTSD"}
-      description={
-        "Runs parameter recovery using hierarchical Bayesian model and Markov chain Monte Carlo (MCMC) sampling algorithm"
-      }
-      fileExtension={"jpg"}
-    />
-    <ProjectCard
-      projectName={"Gutenberg_Book_Search_Website"}
-      description={
-        "A full-stack website with a database of 12,421,637 documents (scraped from Project Gutenberg using web crawler)."
-      }
-      fileExtension={"jpeg"}
-    />
-    <ProjectCard
       projectName={"Mini_Database_System"}
       description={
         "A lightweight database system that has query optimisation and supports basic data operations"
@@ -32,6 +18,21 @@ const Projects = () => (
       }
       fileExtension={"gif"}
     />
+    <ProjectCard
+      projectName={"Computational_Psychiatry_in_PTSD"}
+      description={
+        "Runs parameter recovery using hierarchical Bayesian model and Markov chain Monte Carlo (MCMC) sampling algorithm"
+      }
+      fileExtension={"jpg"}
+    />
+    <ProjectCard
+      projectName={"Gutenberg_Book_Search_Website"}
+      description={
+        "A full-stack website with a database of 12,421,637 documents (scraped from Project Gutenberg using web crawler)."
+      }
+      fileExtension={"jpeg"}
+    />
+
     <ProjectCard
       projectName={"Drone_Path_Planning_Software"}
       description={

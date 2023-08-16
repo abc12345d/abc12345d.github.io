@@ -1,6 +1,7 @@
 // import React from "react";
 
 import { Route, Routes } from "react-router-dom";
+import HomeNavbar from "./components/HomeNavBar";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Projects from "./pages/Projects";
@@ -14,7 +15,7 @@ import "./App.css";
 
 const HomePageWrapper = ({ children }) => (
   <>
-    <Navbar />
+    <HomeNavbar />
     <div className="content-container">{children}</div>
   </>
 );

@@ -1,4 +1,5 @@
 import "./Home.css";
+import { TypeAnimation } from "react-type-animation";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -7,7 +8,17 @@ function Home() {
 
   return (
     <section id="aboutMe">
-      <h1>Hello! I'm ZhiQi Lee</h1>
+      <TypeAnimation
+        sequence={["Hello! I'm ZhiQi Lee"]}
+        speed={40}
+        repeat={3}
+        style={{
+          fontFamily: "monospace",
+          fontSize: " 2.3em",
+          fontWeight: "800",
+        }}
+      />
+      <h1></h1>
       <p>
         A Software Engineer obsessed with learning how things work. Turning
         those insight into reality is the best learning way for me. You can read

@@ -33,12 +33,11 @@ function Home() {
       </p>
 
       <p>
-        As a junior engineer which have a coding journey spanning more than 7
-        years, my objective has been to explore different parts of the computer
-        world, thereby acquiring hands-on experience in frontend, backend,
-        devops, and more. With exposure to a wide array of technologies across
-        multiple languages and frameworks, I am confident that I will be able to
-        pick up new skills and technologies quickly.
+        As a software engineer with 6+ years of coding experience, my aim has
+        been to explore different parts of computer science, thereby acquiring
+        hands-on experience. With exposure to a wide array of technologies
+        across multiple programming languages and frameworks, I am confident
+        that I will be able to pick up new skills and technologies quickly.
       </p>
       <p>
         I'm currently looking for an internship/full-time position and would be

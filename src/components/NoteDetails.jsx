@@ -19,8 +19,10 @@ function NoteDetails() {
   }, [noteId]);
 
   return (
-    <div className="markdownContainer">
-      <Markdown>{post}</Markdown>
+    <div className="noteDetailsContainer">
+      <div className="markdownContainer">
+        <Markdown>{post}</Markdown>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const pdfUrl = new URL(`../assets/ZhiQiLee_resume.pdf`, import.meta.url).href;
+  const pdfUrl = new URL(`../assets/ZhiQiLee_cv.pdf`, import.meta.url).href;
   const navigate = useNavigate();
 
   return (

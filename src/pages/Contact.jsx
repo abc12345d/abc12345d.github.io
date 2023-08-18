@@ -1,7 +1,7 @@
 import "./Contact.css";
 
 function Contact() {
-  const pdfUrl = new URL(`../assets/ZhiQiLee_resume.pdf`, import.meta.url).href;
+  const pdfUrl = new URL(`../assets/ZhiQiLee_cv.pdf`, import.meta.url).href;
   return (
     <section className="myCV">
       <a href={pdfUrl}>If nothing shows up, click this link</a>

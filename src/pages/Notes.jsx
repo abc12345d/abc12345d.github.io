@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 // import { Outlet } from "react-router-dom";
 
 const Notes = () => (
-  <>
+  <div className="NotesContainer">
     <section id="DS_Algo">
       <h1>Data Structures and Algorithms</h1>
       <ul>
@@ -251,7 +251,7 @@ const Notes = () => (
         </li>
       </ul>
     </section>
-  </>
+  </div>
 );
 
 export default Notes;

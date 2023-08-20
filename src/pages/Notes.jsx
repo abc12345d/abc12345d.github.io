@@ -242,6 +242,15 @@ const Notes = () => (
       </ul>
       {/* <Outlet /> */}
     </section>
+    <section id="Python">
+      <h1>Python</h1>
+      <ul>
+        <li>
+          <span>21 AUG 2023 {">>"} </span>
+          <NavLink to="/notes/python-Max">max() Function</NavLink>
+        </li>
+      </ul>
+    </section>
   </>
 );
 

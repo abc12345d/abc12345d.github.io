@@ -1,7 +1,6 @@
 import "./Projects.css";
 import ProjectCard from "../components/ProjectCard";
 
-const filename = "image_ipsum";
 const Projects = () => (
   <div className="cards">
     <ProjectCard

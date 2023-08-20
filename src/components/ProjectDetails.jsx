@@ -20,7 +20,8 @@ function ProjectDetails() {
 
   return (
     <div className="markdownContainer">
-      <Markdown>{post}</Markdown>
+      {/* <Markdown>{post}</Markdown> */}
+      <p>~~~ Still building ~~~</p>
     </div>
   );
 }

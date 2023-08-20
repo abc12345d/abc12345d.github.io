@@ -1,16 +1,16 @@
-#DS_Algo{
+section{
     font-family:sans-serif;
 }
-#DS_Algo li{
+section li{
     list-style-type: none;
 }
 
-#DS_Algo a{
+section a{
     text-decoration: none;
     color: #4682A9;
 }
 
-#DS_Algo span{
+section span{
     color: grey;
     font-family: monospace,sans-serif
 }

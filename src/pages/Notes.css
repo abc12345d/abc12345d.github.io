@@ -1,16 +1,14 @@
-#NotesContainer section{
+.NotesContainer section{
     font-family:sans-serif;
 }
-#NotesContainer section li{
+.NotesContainer section li{
     list-style-type: none;
 }
-
-#NotesContainer section a{
+.NotesContainer section a{
     text-decoration: none;
     color: #4682A9;
 }
-
-#NotesContainer section span{
+.NotesContainer section span{
     color: grey;
     font-family: monospace,sans-serif
 }

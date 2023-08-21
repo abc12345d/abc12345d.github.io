@@ -247,7 +247,9 @@ const Notes = () => (
       <ul>
         <li>
           <span>21 AUG 2023 {">>"} </span>
-          <NavLink to="/notes/python-Max">max() Function</NavLink>
+          <NavLink to="/notes/python-max-dict">
+            Get max key or max value from a Dict object
+          </NavLink>
         </li>
       </ul>
     </section>

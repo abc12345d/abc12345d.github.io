@@ -1,0 +1,8 @@
+.projectDetailsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.markdownContainer{
+    width: 75%;
+}

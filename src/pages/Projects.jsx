@@ -6,7 +6,7 @@ const Projects = () => (
     <ProjectCard
       projectName={"Mini_Database_System"}
       description={
-        "A lightweight database system that has query optimisation and supports basic data operations"
+        "A relational database system that has query optimisation and supports basic data operations"
       }
       fileExtension={"jpeg"}
     />

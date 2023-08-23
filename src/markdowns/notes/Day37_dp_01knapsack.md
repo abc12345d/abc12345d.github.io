@@ -1,62 +1,11 @@
-# 1049. Last Stone Weight II
-core idea:\
-Transform the question into 1/0 knapsack problem which use dynamic programming algorithm.
-
-From the question, we knew that there is at most one stone left at the end of the game and we must return the smallest possible weight of the left stone (if there is one).
-
-```
-left_stone 
-= stone_X - stone_Y 
-= (a pile of stones) - (a pile of stones)
-
-smallest left stone = smallest difference between two piles of stones
-```
-
-To get two piles of stones which have smallest difference in weight, we must form two piles of stones where their weight summed to `sum(stones) // 2` or as close as possible to the number.
-
-For example,
-```
-stones = [2,7,4,1,8,1]
-Bag limit = sum(stones) // 2 = 11
-weight[i] = value[i] = stones[i]
-dp[i] = the maximum weight of stones in the bag when the bag limit is `i`
-```
-
-Time complexity: O(m * n) where m = len(stones), n = sum(stones)\
-Space complexity: O(n)
-
-```PYTHON
-def lastStoneWeightII(self, stones: List[int]) -> int:
-
-    left_stone = 0
-    total = sum(stones)
-    half_sum = total // 2
-
-    if total % 2 == 1:
-        left_stone += 1
-
-    # initialisation of dp array
-    dp = [0] * (half_sum + 1)
-
-    for stone in stones:
-        # traverse from the last bag weight 
-        # so that the top left corner will not be overwrote
-        for i in range(half_sum, stone - 1, -1):
-            dp[i] = max(dp[i], dp[i-stone] + stone)
-
-    left_stone += (half_sum - dp[half_sum]) * 2
-
-    return left_stone 
-    # or return
-    # (total - dp[half_sum]) - dp[half_sum] 
-```
-
 # 494. Target Sum
-### way 1: backtracking without prunning
+## way 1: backtracking without prunning
 Running all the test cases with this way will lead to `time limit exceeded`.
 
-Time complexity: O(2<sup>n</sup>) where n = len(nums)\
+Time complexity: O(2<sup>n</sup>) where n = len(nums)
+
 Space complexity: O(n)
+
 ```PYTHON
 def findTargetSumWays(self, nums: List[int], target: int) -> int:
     def backtrack(total,index):
@@ -80,10 +29,12 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
     backtrack(0,-1)
     return result 
 ```
-### way 2: dynamic programming(recursion with memo)
+
+## way 2: dynamic programming(recursion with memo)
 This question is asking the number of different expressions that we can build, which evaluates to target.
 
 According to the setting of questions, 
+
 ```PYTHON
 f(target,index) = n number of different expr
 f(target, index) = f(target - nums[index], index - 1) + f(target + nums[index], index - 1)
@@ -112,8 +63,11 @@ return result
 # = f(-1,0) +f(1,0) + 3*f(1,0) + 3*f(3,0) + 3*f(3,0) + 4*f(5,0)           + f(7,0)
 # = 5
 ```
-Time complexity: O(2n) where n = len(nums) \
+
+Time complexity: O(2n) where n = len(nums) 
+
 Space complexity: O(n)
+
 ```PYTHON
 def findTargetSumWays(self, nums: List[int], target: int) -> int:
     def dp(accum, index):
@@ -138,5 +92,35 @@ def findTargetSumWays(self, nums: List[int], target: int) -> int:
     memo = {}
     return dp(target, len(nums)-1)
 ```
+## way 3: tabulated dp - 01 knapsack
+Partition the `nums` into two subset such that `sum(subset1) - sum(subset2) = target`
+
+Due to the below calculation, we are looking for the number of ways to form subset1 with `baglimit = (sum(nums)+target) // 2`
+
+<img width="888" alt="Screenshot 2023-08-22 at 11 28 37" src="https://github.com/abc12345d/algorithm_practice/assets/44512722/5267de1e-2851-42b5-a915-80dfc279c074">
+
+```PYTHON
+def findTargetSumWays(self, nums: List[int], target: int) -> int:
+    summ = sum(nums)
+
+    # nums = [1], target=[2] or [-2] return 0
+    if summ < abs(target): return 0
+    # nums = [1,5] target=[3] return 0
+    if (summ + target) % 2 == 1: return 0
+
+    bagLimit = (sum(nums)+ target)//2
+
+    dp = [0] * (bagLimit+1)
+    dp[0] = 1
+    for num in nums:
+        for index in range(bagLimit, num-1 ,-1):
+            dp[index] += dp[index-num] 
+
+    return dp[bagLimit] 
+```
 
 TODO:  474.Ones and zeros
+
+# Reference
+- [Target Sum | Dynamic Problem | Leetcode 494](https://www.youtube.com/watch?v=hqGa65Rp5LQ)
+- [494 bottom-up dp](https://leetcode.com/problems/target-sum/solutions/3283014/494-time-92-20-and-space-96-14-solution-with-step-by-step-explanation/)

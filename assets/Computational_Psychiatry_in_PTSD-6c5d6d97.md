@@ -14,6 +14,7 @@ By running a successful parameter recovery on the artificial data (see below fig
 
 Traceplot for sampling 4 runs of MCMC for 1_000 tune and 1_000 draw iterations:
 The left column consists of a smoothed histogram (using kernel density estimation) of the marginal posteriors of each stochastic random variable while the right column contains the samples of the Markov chain plotted in sequential order. 
+
 <img width="746" alt="mcmc_result" src="https://github.com/abc12345d/Markdown_workspace/assets/44512722/1ee8b0db-e67f-4b77-a4c8-551ffb2dfc70">
 
 

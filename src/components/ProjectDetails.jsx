@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
 import "./ProjectDetails.css";
+import Code from "./Code";
 
 function ProjectDetails() {
   const { projectName } = useParams();
@@ -21,8 +22,17 @@ function ProjectDetails() {
   return (
     <div className="projectDetailsContainer">
       <div className="markdownContainer">
-        <Markdown>{post}</Markdown>
-        In the process of writing project details~~~
+        <Markdown
+          options={{
+            overrides: {
+              code: {
+                component: Code,
+              },
+            },
+          }}
+        >
+          {post}
+        </Markdown>
       </div>
     </div>
   );

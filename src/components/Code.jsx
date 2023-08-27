@@ -5,7 +5,7 @@ function Code({ className, children }) {
   const language = className.replace("lang-", "");
   return (
     <div className="codeBlock">
-      <SyntaxHighlighter language={language.toLowerCase()} style={materialDark}>
+      <SyntaxHighlighter language={language} style={materialDark}>
         {children}
       </SyntaxHighlighter>
     </div>

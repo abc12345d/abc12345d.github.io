@@ -14,7 +14,7 @@ There are 3 parts for this version:
 
 I then scheduled the Python code to run on a daily basis using PythonAnywhere
 
-```PYTHON
+```python
 import requests
 from twilio.rest import Client
 

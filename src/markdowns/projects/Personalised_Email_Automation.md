@@ -3,6 +3,7 @@
 Sends personalised emails automatically from CSV file using Python.
 
 ---
+
 ## Example 
 <img width="777" alt="Personalised_Email_Automation" src="https://github.com/abc12345d/Markdown_workspace/assets/44512722/2c0bac05-5223-46bd-beb1-fe8f2f29b77f">
 

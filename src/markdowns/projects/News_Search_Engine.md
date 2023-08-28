@@ -11,7 +11,8 @@ Finally, I implemented various search functionalities that operate on the Term-D
 - Proximity search
 - Ranked information retrieval system based on TF-IDF weighting.
 
-# Example Outcome of Ranked query 
+
+## Example Outcome of Ranked query
 <img width="777" alt="News_Search_Engine" src="https://github.com/abc12345d/Markdown_workspace/assets/44512722/3fae3063-578b-4041-b4ce-4deb71b5b652">
 
 ## Project Code

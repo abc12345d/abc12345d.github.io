@@ -4,6 +4,23 @@ import { NavLink } from "react-router-dom";
 
 const Notes = () => (
   <div className="NotesContainer">
+    <section id="Python">
+      <h1>Python</h1>
+      <ul>
+        <li>
+          <span>22 AUG 2023 {">>"} </span>
+          <NavLink to="/notes/python-environment-management">
+            Environment management in Python
+          </NavLink>
+        </li>
+        <li>
+          <span>21 AUG 2023 {">>"} </span>
+          <NavLink to="/notes/python-max-dict">
+            Get max key or max value from a Dict object
+          </NavLink>
+        </li>
+      </ul>
+    </section>
     <section id="DS_Algo">
       <h1>Data Structures and Algorithms</h1>
       <ul>
@@ -241,17 +258,6 @@ const Notes = () => (
         </li>
       </ul>
       {/* <Outlet /> */}
-    </section>
-    <section id="Python">
-      <h1>Python</h1>
-      <ul>
-        <li>
-          <span>21 AUG 2023 {">>"} </span>
-          <NavLink to="/notes/python-max-dict">
-            Get max key or max value from a Dict object
-          </NavLink>
-        </li>
-      </ul>
     </section>
   </div>
 );

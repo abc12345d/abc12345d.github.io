@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
 import "./NoteDetails.css";
+import Code from "./Code";
 
 function NoteDetails() {
   const { noteId } = useParams();
@@ -23,6 +24,19 @@ function NoteDetails() {
       <div className="markdownContainer">
         <Markdown>{post}</Markdown>
       </div>
+      {/* <div className="markdownContainer">
+        <Markdown
+          options={{
+            overrides: {
+              code: {
+                component: Code,
+              },
+            },
+          }}
+        >
+          {post}
+        </Markdown>
+      </div> */}
     </div>
   );
 }

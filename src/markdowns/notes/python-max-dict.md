@@ -1,6 +1,6 @@
 # Get max key or max value from a Dict object
 
-E.g. `a_dict = {1:2,2:3,3:1}`
+E.g. *a_dict = {1:2,2:3,3:1}*
 
 Verbose way:
 

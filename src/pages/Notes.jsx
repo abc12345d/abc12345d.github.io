@@ -4,6 +4,19 @@ import { NavLink } from "react-router-dom";
 
 const Notes = () => (
   <div className="NotesContainer">
+    <section id="WebDevelopment">
+      <h1>Web Development</h1>
+      <ul>
+        <li>
+          <span>23 AUG 2023 {">>"} </span>
+          <NavLink to="/notes/cross-site-request-forgery-attack">
+            Cross Site Request Forgery (CSRF) attack and how to prevent it using
+            Flask-WTF
+          </NavLink>
+        </li>
+      </ul>
+    </section>
+
     <section id="Python">
       <h1>Python</h1>
       <ul>

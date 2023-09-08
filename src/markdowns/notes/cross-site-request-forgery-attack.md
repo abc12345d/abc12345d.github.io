@@ -13,12 +13,28 @@ How Flask-WTF extension tackles CSRF attacks:
 1. **CSRF Token Generation**: Flask-WTF generates a random CSRF token for each form that you create using the extension. This token is unique to the user's session.
 2. **Token Insertion in Forms**: When you render a form in your HTML template using Flask-WTF, it inserts the CSRF token as a hidden field in the form. For example, in your template, you might have something like:
 
+    ```PYTHON
+    # app.py
+    from flask_wtf.csrf import CSRFProtect
+    app = Flask(__name__)
+    app.config.update(
+        DEBUG=True,
+        SECRET_KEY="secret_key",
+    )
+
+    csrf = CSRFProtect()
+    csrf.init_app(app)
+    ```
+
     ```HTML
+    <!-- templates/account.html -->
     <form action="/accounts" method="POST" autocomplete="off">
         <p>Transfer Money</p>
         <input type="text" name="account" placeholder="accountid">
         <input type="number" name="amount" placeholder="amount">
         <input type="submit" value="send">
+
+        <!-- insert token in forms -->
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     </form>
     ```

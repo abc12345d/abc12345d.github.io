@@ -10,21 +10,23 @@ Here's how CSRF works:
 5. **Unauthorized Action**: The attacker's request is executed on the target application without the user's consent. This could lead to actions like unauthorized money transfers, changes to account settings, or posting on behalf of the user without their knowledge.
 
 How Flask-WTF extension tackles CSRF attacks:
-1. **CSRF Token Generation**: Flask-WTF generates a random CSRF token for each form that you create using the extension. This token is unique to the user's session.
-2. **Token Insertion in Forms**: When you render a form in your HTML template using Flask-WTF, it inserts the CSRF token as a hidden field in the form. For example, in your template, you might have something like:
+1. **Configure a secret key in a Flask app**: The secret key is part of the mechanism the Flask-WTF uses to protect all forms against CSRF attacks.
 
     ```PYTHON
-    # app.py
-    from flask_wtf.csrf import CSRFProtect
-    app = Flask(__name__)
-    app.config.update(
-        DEBUG=True,
-        SECRET_KEY="secret_key",
-    )
+        # app.py
+        from flask_wtf.csrf import CSRFProtect
+        app = Flask(__name__)
+        app.config.update(
+            DEBUG=True,
+            SECRET_KEY="secret_key",
+        )
 
-    csrf = CSRFProtect()
-    csrf.init_app(app)
+        csrf = CSRFProtect()
+        csrf.init_app(app)
     ```
+
+2. **CSRF Token Generation**: Flask-WTF generates a random CSRF token for each form that you create using the extension. This token is unique to the user's session. To use Flask-WTF, we must set the *SECRET_KEY*
+3. **Token Insertion in Forms**: When you render a form in your HTML template using Flask-WTF, it inserts the CSRF token as a hidden field in the form. For example, in your template, you might have something like:
 
     ```HTML
     <!-- templates/account.html -->
@@ -39,8 +41,9 @@ How Flask-WTF extension tackles CSRF attacks:
     </form>
     ```
 
-3. **Token Validation on Submission**: When the user submits the form, Flask-WTF automatically validates the CSRF token included in the form data. It checks whether the token matches the one associated with the user's session. If the tokens do not match, the submission is rejected.
+4. **Token Validation on Submission**: When the user submits the form, Flask-WTF automatically validates the CSRF token included in the form data. It checks whether the token matches the one associated with the user's session. If the tokens do not match, the submission is rejected.
 
 
 # Reference
 [an example of a Flask app that's vulnerable to CSRF attacks and how to implement CSRF protection](https://testdriven.io/blog/csrf-flask/)
+[Miguel Grinberg - Flask Web development](https://www.oreilly.com/library/view/flask-web-development/9781491991725/)

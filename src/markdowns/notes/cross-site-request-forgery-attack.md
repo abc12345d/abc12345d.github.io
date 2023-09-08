@@ -25,7 +25,7 @@ How Flask-WTF extension tackles CSRF attacks:
         csrf.init_app(app)
     ```
 
-2. **CSRF Token Generation**: Flask-WTF generates a random CSRF token for each form that you create using the extension. This token is unique to the user's session. To use Flask-WTF, we must set the *SECRET_KEY*
+2. **CSRF Token Generation**: Flask-WTF generates a random CSRF token for each form that you create using the extension. This token is unique to the user's session. 
 3. **Token Insertion in Forms**: When you render a form in your HTML template using Flask-WTF, it inserts the CSRF token as a hidden field in the form. For example, in your template, you might have something like:
 
     ```HTML

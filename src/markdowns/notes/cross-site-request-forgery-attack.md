@@ -13,16 +13,16 @@ How Flask-WTF extension tackles CSRF attacks:
 1. **Configure a secret key in a Flask app**: The secret key is part of the mechanism the Flask-WTF uses to protect all forms against CSRF attacks.
 
     ```PYTHON
-        # app.py
-        from flask_wtf.csrf import CSRFProtect
-        app = Flask(__name__)
-        app.config.update(
-            DEBUG=True,
-            SECRET_KEY="secret_key",
-        )
+    # app.py
+    from flask_wtf.csrf import CSRFProtect
+    app = Flask(__name__)
+    app.config.update(
+        DEBUG=True,
+        SECRET_KEY="secret_key",
+    )
 
-        csrf = CSRFProtect()
-        csrf.init_app(app)
+    csrf = CSRFProtect()
+    csrf.init_app(app)
     ```
 
 2. **CSRF Token Generation**: Flask-WTF generates a random CSRF token for each form that you create using the extension. This token is unique to the user's session. 

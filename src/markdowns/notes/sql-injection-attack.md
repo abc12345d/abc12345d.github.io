@@ -4,6 +4,15 @@ SQL injection is a type of security vulnerability that occurs when an attacker c
 
 ---
 
+## How to detect SQL injection vulnerabilities 
+We can detect SQL injection manually using a systematic set of tests against every entry point in the application. To do this, we would typically submit:
+
+- The single quote character (*' *) and look for errors or other anomalies. For example, if a user input field is vulnerable, entering (*' *)  might lead to a database error because the single quote can break the query structure.
+
+- Inputs that evaluate to the base (original) value of the entry point, and to a manipulated value that contains SQL-specific syntax, and look for systematic differences in the application responses. For example, *gift* is base value of the entry point, *gift'* might lead to internal server error but *gift'--* does not lead to any error since *--* represents single-line comment in SQL.
+
+- Boolean conditions such as *OR 1=1* and *OR 1=2*, and look for differences in the application's responses.
+
 ## Example of SQL injection attack:
 
 ### Original code
@@ -24,7 +33,7 @@ def vulnerable_is_admin(username):
 ```
 
 ### SQL attack
-As the `vulnerable_is_admin()` function allows the value passed from the client to be executed directly to the database through string interpolation, without performing any sort of check or validation. An intruder can:
+As the *vulnerable_is_admin()* function allows the value passed from the client to be executed directly to the database through string interpolation, without performing any sort of check or validation. An intruder can:
 
 1. exploit the system and gain admin permissions by using a carefully crafted string such as 
   
@@ -114,3 +123,5 @@ As the `vulnerable_is_admin()` function allows the value passed from the client 
 
 # Reference
 [Preventing SQL Injection Attacks With Python](https://realpython.com/prevent-python-sql-injection/#exploiting-query-parameters-with-python-sql-injection)
+
+[portswigger - sql injection](https://portswigger.net/web-security/sql-injection#retrieving-hidden-data)

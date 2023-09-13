@@ -8,6 +8,12 @@ const Notes = () => (
       <h1>Web Development</h1>
       <ul>
         <li>
+          <span>24 AUG 2023 {">>"} </span>
+          <NavLink to="/notes/sql-injection-attack">
+            SQL injection attack and how to prevent it using parameterized query
+          </NavLink>
+        </li>
+        <li>
           <span>23 AUG 2023 {">>"} </span>
           <NavLink to="/notes/cross-site-request-forgery-attack">
             Cross Site Request Forgery (CSRF) attack and how to prevent it using

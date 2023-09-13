@@ -2,6 +2,8 @@
 
 Cross-Site Request Forgery (CSRF) is an attack against a web application in which the attacker attempts to trick an authenticated user into performing a malicious action. Most CSRF attacks target web applications that use cookie-based auth since web browsers include all of the cookies associated with a particular domain with each request. So when a malicious request is made from the same browser, the attacker can easily make use of the stored cookies.
 
+---
+
 Here's how CSRF works: 
 1. **User Authentication**: The victim user logs in to a web application, such as a social media site or an online banking platform. The user receives an authentication token, usually stored as a browser cookie, which identifies them as a legitimate user.
 2. **Malicious Request**: The attacker creates a malicious website or disguises a link on a legitimate site. This website or link contains a request to perform an action on the target web application, such as changing the user's password or making a financial transaction.
